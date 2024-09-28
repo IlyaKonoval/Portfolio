@@ -3,7 +3,7 @@
     font-weight: 400;
     font-style: normal;
 }
-
+/* -----home page----- */
 .index-body{
     background: #080808;
     color: #fff;
@@ -68,7 +68,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -107,4 +106,53 @@ nav > ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+}
+
+/* -----portfolio page----- */
+
+.portoflio-body{
+    background: #080808;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#portfolio__heading {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+}
+
+.my_projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 20px;
+}
+
+.my_projects div {
+    margin: 8px;
+    font-size: 18px;
+    padding: 55px;
+}
+
+.my_projects div a {
+    color: #DAA520;
+    text-decoration: underline;
+}
+
+.my_projects div a:hover {
+    color: #B8860B;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .index-main {
+        background-image: none;
+    }
+
+    .my_projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
