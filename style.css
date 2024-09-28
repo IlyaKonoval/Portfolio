@@ -16,25 +16,25 @@
     padding: 10px 10%;
 }
 
-nav{
+.nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row-reverse;
 }
-nav ul li{
+.nav > ul > li{
     display: inline-block;
     list-style: none;
     margin: 15px 25px;
 }
-nav ul li a{
+.nav > ul > li > a{
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     position: relative;
 }
-nav ul li a::after{
+.nav > ul > li > a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -44,7 +44,7 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.3s;
 }
-nav ul li a:hover::after{
+.nav > ul > li > a:hover::after{
     width: 100%;
 }
 .index-main {
@@ -63,7 +63,7 @@ nav ul li a:hover::after{
     font-size: 18px;
 }
 
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,11 +98,11 @@ a:hover {
     color: #B8860B;
 }
 
-.footer__copyright p {
+.footer__copyright > p {
     color: #DAA520;
     text-decoration: none;
 }
-nav > ul {
+.nav > ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -118,30 +118,30 @@ nav > ul {
     padding: 0;
 }
 
-#portfolio__heading {
+.portfolio__heading {
     font-size: 28px;
     padding: 10px;
     text-align: center;
 }
 
-.my_projects {
+.my-projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-height: 20px;
 }
 
-.my_projects div {
+.my-projects div {
     margin: 8px;
     font-size: 18px;
     padding: 55px;
 }
 
-.my_projects div a {
+.my-projects div a {
     color: #DAA520;
     text-decoration: underline;
 }
 
-.my_projects div a:hover {
+.my-projects div a:hover {
     color: #B8860B;
     text-decoration: underline;
 }
