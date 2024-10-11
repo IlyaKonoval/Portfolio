@@ -165,6 +165,10 @@
     text-align: center;
 }
 
+.page-footer__copyright-text {
+    text-transform: capitalize;
+}
+
 .my-projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
