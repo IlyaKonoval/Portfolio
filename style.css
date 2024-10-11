@@ -182,8 +182,17 @@
     border: 1px solid #333;
 }
 
-.project {
+.row {
+    display: contents;
+}
+.row:nth-child(2n+1) div {
+    background: #B8860B;
+}
+.row:nth-child(2n+2) div {
+    background: #DAA520;
+}
 
+.project {
 }
 
 .project__title {
