@@ -22,10 +22,15 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
     padding: 10px 10%;
+    position: fixed;
+    z-index: 10
 }
 
 .page-header__nav {
 
+}
+.project:nth-child(6n + 1), .project:nth-child(6n - 1), .project:nth-child(6n - 3) {
+    background-color: #DAA520;
 }
 
 .page-header__list {
@@ -186,7 +191,7 @@
 }
 
 .project__link {
-    color: #DAA520;
+    color: #ffffff;
     text-decoration: underline;
 }
 
