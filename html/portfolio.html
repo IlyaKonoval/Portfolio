@@ -7,15 +7,14 @@
 </head>
 <body class="portfolio-body">
 <header class="page-header">
-    <div class="container">
-        <nav class="page-header__nav">
-            <ul class="page-header__list">
-                <li class="page-header__item"><a class="page-header__link" href="./index.html">Home</a></li>
-                <li class="page-header__item"><a class="page-header__link" href="./portfolio.html">Portfolio</a></li>
-                <li class="page-header__item"><a class="page-header__link" href="./todo.html">Todo</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="todo.html">Todo</a></li>
+            <li><a href="promise.html">Promise</a></li>
+        </ul>
+    </nav>
 </header>
 <main class="portfolio">
     <h1 class="portfolio__heading">My Projects</h1>
@@ -66,6 +65,11 @@
     <div class="page-footer__copyright">
         <p class="page-footer__copyright-text">© Ilya Konovalov, 2024</p>
     </div>
+    <div class="page-footer__loadtime">
+        <span id="loadTime"></span>
+    </div>
 </footer>
 </body>
+<script src="../js/time_loader.js"></script>
+<script src="../js/page_active.js"></script>
 </html>

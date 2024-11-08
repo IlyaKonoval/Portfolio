@@ -31,14 +31,11 @@ body {
     z-index: 10
 }
 
-.page-header__nav {
-
-}
 .project:nth-child(6n + 1), .project:nth-child(6n - 1), .project:nth-child(6n - 3) {
     background-color: #DAA520;
 }
 
-.page-header__list {
+nav ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -46,19 +43,19 @@ body {
     padding: 0;
 }
 
-.page-header__item {
+nav li {
     display: inline-block;
     margin: 15px 25px;
 }
 
-.page-header__link {
+nav a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     position: relative;
 }
 
-.page-header__link::after {
+nav a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -69,8 +66,12 @@ body {
     transition: 0.3s;
 }
 
-.page-header__link:hover::after {
+nav a:hover::after {
     width: 100%;
+}
+
+.active {
+    color: #DAA520;
 }
 
 .index-main {
@@ -128,22 +129,15 @@ body {
     margin: 0 10px;
 }
 
-.page-footer__link {
+.page-footer__link,
+.page-footer__loadtime,
+.page-footer__copyright {
     color: #DAA520;
     text-decoration: none;
 }
 
 .page-footer__link:hover {
     color: #B8860B;
-}
-
-.page-footer__copyright {
-
-}
-
-.page-footer__copyright-text {
-    color: #DAA520;
-    text-decoration: none;
 }
 
 /* -----to-do----- */
@@ -241,6 +235,57 @@ body {
     padding: 10px;
     top: 0;
     right: 0;
+}
+
+/* -----promise-----*/
+
+.comments-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #DAA520;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.comments-container {
+    width: min(100%, 768px);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+.comment {
+    color: white;
+    border-top: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+}
+
+.comment__author {
+    color: #DAA520;
+}
+
+.comment p {
+    margin: 5px 0;
+    padding: 0;
 }
 
 
