@@ -1,0 +1,307 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -----home page----- */
+
+body {
+    background-color: black;
+}
+
+.index-body {
+    background: #080808;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding: 10px 10%;
+    position: fixed;
+    z-index: 10
+}
+
+.page-header__nav {
+
+}
+.project:nth-child(6n + 1), .project:nth-child(6n - 1), .project:nth-child(6n - 3) {
+    background-color: #DAA520;
+}
+
+.page-header__list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header__item {
+    display: inline-block;
+    margin: 15px 25px;
+}
+
+.page-header__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.page-header__link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #DAA520;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.page-header__link:hover::after {
+    width: 100%;
+}
+
+.index-main {
+    padding-top: 20%;
+    background-image: url("../background.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    flex-grow: 1;
+}
+
+.main-text {
+
+}
+
+.main-text__profession {
+
+}
+
+.main-text__title {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.main-quote {
+    font-size: 18px;
+}
+
+.main-quote__text {
+
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.page-footer__links {
+    display: flex;
+    justify-content: center;
+}
+
+.page-footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer__item {
+    display: inline;
+    margin: 0 10px;
+}
+
+.page-footer__link {
+    color: #DAA520;
+    text-decoration: none;
+}
+
+.page-footer__link:hover {
+    color: #B8860B;
+}
+
+.page-footer__copyright {
+
+}
+
+.page-footer__copyright-text {
+    color: #DAA520;
+    text-decoration: none;
+}
+
+/* -----to-do----- */
+
+#todo-main {
+    top: 100px;
+}
+
+#todo-main form {
+    display: flex;
+    width: 100%;
+}
+
+#toast-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#todo-main {
+    position: relative;
+    margin: 0 100px;
+    padding-bottom: 100px;
+    min-height: calc(100vh - 200px - 100px);
+}
+
+#todo-list {
+    margin: 0;
+}
+
+#todo-list .input-bar {
+    display: flex;
+    border-bottom: solid 1px white;
+}
+
+#todo-list button, .counts {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 0 10px 10px;
+    color: white;
+    border: solid 1px white;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+#todo-list button:hover {
+    color: gray;
+    background-color: black;
+    cursor: pointer;
+}
+
+#todo-list input {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#todo-list button {
+    outline: none;
+    color: white;
+    background: none;
+}
+
+#todo-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+#todo-list ul li {
+    position: relative;
+    display: flex;
+    word-break: break-word;
+    list-style: none;
+    font-size: 16px;
+    padding: 20px 25px 20px 20px;
+    margin: 10px 0;
+    background-color: #DAA520;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#todo-list ul li.crossed {
+    text-decoration: line-through;
+}
+
+#todo-list ul li span {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+}
+
+
+
+/* -----portfolio page----- */
+
+.portfolio-body {
+    background: #080808;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__heading {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+}
+
+.project {
+    font-size: 18px;
+    padding: 55px;
+}
+
+@media (min-width: 768px) {
+    .my-projects {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .row:nth-child(2n+1) .project {
+        background-color: #B8860B;
+    }
+
+    .row:nth-child(2n) .project {
+        background-color: #DAA520;
+    }
+
+    .row {
+        display: contents;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        padding: 0 10px 10px;
+        display: grid;
+        grid-gap: 10px;
+    }
+
+    .row:nth-child(2n+1) .project:nth-child(2n),
+    .row:nth-child(2n) .project:nth-child(2n+1) {
+        background-color: #B8860B;
+    }
+
+    .row:nth-child(2n+1) .project:nth-child(2n+1),
+    .row:nth-child(2n) .project:nth-child(2n) {
+        background-color: #DAA520;
+    }
+}

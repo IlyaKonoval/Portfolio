@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Portfolio, ML">
+    <title>Todo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="page-header">
+    <div class="container">
+        <nav class="page-header__nav">
+            <ul class="page-header__list">
+                <li class="page-header__item"><a class="page-header__link" href="./index.html">Home</a></li>
+                <li class="page-header__item"><a class="page-header__link" href="./portfolio.html">Portfolio</a></li>
+                <li class="page-header__item"><a class="page-header__link" href="./todo.html">Todo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="todo-main">
+    <div id="todo-list">
+        <div class="input-bar">
+            <form id="task-form">
+                <label for="input-box"></label>
+                <input type="text" id="input-box" placeholder="Write your task">
+                <button type="submit" class="button">
+                    <span>Add</span>
+                </button>
+                <div class="counts">
+                    <span id="completed-count">0</span>/<span id="task-count">0</span>
+                </div>
+            </form>
+        </div>
+        <div>
+            <ul id="task-list">
+            </ul>
+        </div>
+    </div>
+    <script src="../js/todo.js"></script>
+</main>
+
+<footer class="page-footer">
+    <div class="page-footer__links">
+        <ul class="page-footer__list">
+            <li class="page-footer__item"><a class="page-footer__link" href="https://github.com/IlyaKonoval">github</a></li>
+            <li class="page-footer__item"><a class="page-footer__link" href="https://www.kaggle.com/konovalovml">kaggle</a></li>
+        </ul>
+    </div>
+    <div class="page-footer__copyright">
+        <p class="page-footer__copyright-text">© Ilya Konovalov, 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>
