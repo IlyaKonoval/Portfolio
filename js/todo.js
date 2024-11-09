@@ -44,7 +44,7 @@ listContainer.addEventListener('click', function (e) {
 
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const inputBox = document.getElementById('input-box');
+    const inputBox = event.target.text_area
     if (inputBox.value.trim() === '') {
         showToast('Введите текст задачи', 'error');
     } else {
@@ -55,10 +55,11 @@ taskForm.addEventListener('submit', (event) => {
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
-    inputBox.value = "";
+    event.target.reset();
     saveContent();
     updateCounts();
 });
+
 
 function saveContent() {
     localStorage.setItem("content", listContainer.innerHTML);
