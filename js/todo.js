@@ -1,20 +1,15 @@
 const taskForm = document.getElementById('task-form');
-const listContainer = document.getElementById("task-list")
+const listContainer = document.getElementById("task-list");
 const taskCount = document.getElementById("task-count");
 const completedCount = document.getElementById("completed-count");
 
 function showToast(message, type = 'error') {
-
     if (document.getElementById("toast-container").hasChildNodes("toastik")) {
         return;
     }
 
     const toast = document.createElement('div');
-    toast.className = "toastik"
-    toast.className = `
-    ${type === 'success' ? 'bg-green-500' : 'bg-red-500'}
-    text-white p-4 rounded-lg shadow-lg opacity-90 transition duration-300 mb-4
-    `;
+    toast.className = `toastik ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white p-4 rounded-lg shadow-lg opacity-90 transition duration-300 mb-4`;
     toast.innerText = message;
 
     const toastContainer = document.getElementById('toast-container');
@@ -50,27 +45,27 @@ listContainer.addEventListener('click', function (e) {
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const inputBox = document.getElementById('input-box');
-    if (inputBox.value === '') {
-        showToast('empty task', 'error');
+    if (inputBox.value.trim() === '') { // Удаляем лишние пробелы в начале и в конце
+        showToast('Введите текст задачи', 'error');
     } else {
         let li = document.createElement('li');
-        li.innerHTML = inputBox.value;
+        li.innerText = inputBox.value; // Используем `innerText`, чтобы сохранить формат многострочного текста
         listContainer.appendChild(li);
         let span = document.createElement('span');
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "\u00d7"; // Кнопка для удаления задачи
         li.appendChild(span);
     }
-    inputBox.value = "";
+    inputBox.value = ""; // Очищаем поле после добавления
     saveContent();
     updateCounts();
 });
 
 function saveContent() {
-    localStorage.setItem("content", listContainer.innerHTML);
+    localStorage.setItem("content", listContainer.innerHTML); // Сохраняем задачи в localStorage
 }
 
 function displayContent() {
-    listContainer.innerHTML = localStorage.getItem("content");
+    listContainer.innerHTML = localStorage.getItem("content") || ''; // Загружаем задачи при открытии страницы
     updateCounts();
 }
 

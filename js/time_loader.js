@@ -6,6 +6,6 @@
         const loadTime = endTime - startTime;
 
         const loadTimeElement = document.getElementById('loadTime');
-        loadTimeElement.textContent = loadTime + 'ms';
+        loadTimeElement.textContent = loadTime.toFixed(2) + 'ms';
     });
 })();
