@@ -45,27 +45,27 @@ listContainer.addEventListener('click', function (e) {
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const inputBox = document.getElementById('input-box');
-    if (inputBox.value.trim() === '') { // Удаляем лишние пробелы в начале и в конце
+    if (inputBox.value.trim() === '') {
         showToast('Введите текст задачи', 'error');
     } else {
         let li = document.createElement('li');
-        li.innerText = inputBox.value; // Используем `innerText`, чтобы сохранить формат многострочного текста
+        li.innerText = inputBox.value;
         listContainer.appendChild(li);
         let span = document.createElement('span');
-        span.innerHTML = "\u00d7"; // Кнопка для удаления задачи
+        span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
-    inputBox.value = ""; // Очищаем поле после добавления
+    inputBox.value = "";
     saveContent();
     updateCounts();
 });
 
 function saveContent() {
-    localStorage.setItem("content", listContainer.innerHTML); // Сохраняем задачи в localStorage
+    localStorage.setItem("content", listContainer.innerHTML);
 }
 
 function displayContent() {
-    listContainer.innerHTML = localStorage.getItem("content") || ''; // Загружаем задачи при открытии страницы
+    listContainer.innerHTML = localStorage.getItem("content") || '';
     updateCounts();
 }
 
