@@ -9,7 +9,7 @@ function showToast(message, type = 'error') {
     }
 
     const toast = document.createElement('div');
-    toast.className = `toastik ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white p-4 rounded-lg shadow-lg opacity-90 transition duration-300 mb-4`;
+    toast.className = `toastik ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white pt-2 pl-2 pb-10 pr-10 rounded-lg shadow-lg opacity-90 transition duration-400`;
     toast.innerText = message;
 
     const toastContainer = document.getElementById('toast-container');
